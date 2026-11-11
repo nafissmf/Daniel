@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Countdown } from "@/components/countdown";
 import { DepartmentPanel } from "@/components/department-panel";
 import { Motion } from "@/components/motion";
@@ -12,13 +13,34 @@ import {
   programs,
   team,
 } from "@/lib/content";
+import { jsonLd } from "@/lib/seo";
+
+const preview = process.env.VERCEL_ENV === "preview";
+
+export const metadata: Metadata = {
+  robots: preview
+    ? { index: false, follow: false }
+    : {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+          "max-video-preview": -1,
+        },
+      },
+};
 
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd() }} />
       <SiteHeader />
       <Motion />
 
+      <main>
       <header className="hero" id="beranda">
         <div className="bg ia im" role="img" aria-label="Gedung Rektorat Universitas Diponegoro" />
         <div
@@ -303,6 +325,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      </main>
       <SiteFooter />
     </>
   );

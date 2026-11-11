@@ -1,7 +1,7 @@
 export const site = {
-  title: "Daniel & Kaylila – Bersama untuk Undip yang Lebih Baik",
+  title: "Daniel & Kaylila – Bersama untuk FSM yang Lebih Baik",
   description:
-    "Daniel Lamganda Tua Gultom dan Kaylila Alexandra Nesta. Dua mahasiswa Undip dengan pengalaman kepemimpinan, organisasi, dan pengabdian.",
+    "Daniel Lamganda Tua Gultom dan Kaylila Alexandra Nesta, pasangan calon FSM Universitas Diponegoro. Lihat visi, misi, program kerja, dan jadwal pemilihan.",
   /** Tanggal pemilihan (WIB). Ubah nilai ini untuk menggeser hitung mundur. */
   electionAt: "2026-11-23T08:00:00+07:00",
 };
@@ -140,7 +140,7 @@ export const faqs = [
   },
   {
     question: "Kapan pelaksanaan pemilihan?",
-    answer: "Lihat hitung mundur di atas untuk waktu pelaksanaan pemilihan.",
+    answer: "Pemilihan dilaksanakan pada 23 November 2026, pukul 08.00 WIB.",
   },
   {
     question: "Siapa saja yang dapat memilih?",

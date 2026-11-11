@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Caveat, Plus_Jakarta_Sans } from "next/font/google";
+import { getSiteUrl, seo } from "@/lib/seo";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -19,15 +20,37 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Daniel & Kaylila – Bersama untuk FSM yang Lebih Baik",
-  description:
-    "Daniel Lamganda Tua Gultom dan Kaylila Alexandra Nesta. Dua mahasiswa Undip dengan pengalaman kepemimpinan, organisasi, dan pengabdian.",
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: seo.title,
+    template: "%s | Daniel & Kaylila",
+  },
+  description: seo.description,
+  keywords: seo.keywords,
+  applicationName: "Daniel & Kaylila",
+  authors: [
+    { name: "Daniel Lamganda Tua Gultom" },
+    { name: "Kaylila Alexandra Nesta" },
+  ],
+  creator: "Daniel & Kaylila",
+  category: "Pendidikan",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Daniel & Kaylila – Bersama untuk FSM yang Lebih Baik",
-    description:
-      "Daniel Lamganda Tua Gultom dan Kaylila Alexandra Nesta. Bersama untuk FSM yang lebih baik.",
+    title: seo.title,
+    description: seo.description,
     locale: "id_ID",
     type: "website",
+    url: "/",
+    siteName: "Daniel & Kaylila",
+    images: [seo.image],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.title,
+    description: seo.description,
+    images: [seo.image.url],
   },
   icons: {
     icon: [{ url: "/favicon.ico", type: "image/png" }],
