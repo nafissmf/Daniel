@@ -13,7 +13,7 @@ export function SiteFooter() {
           <div className="row">
             <div>
               <Logo />
-              <p style={{ fontSize: ".76rem", marginTop: 8 }}>Bersama untuk Undip yang lebih baik</p>
+              <p style={{ fontSize: ".76rem", marginTop: 8 }}>Bersama untuk FSM yang lebih baik</p>
             </div>
             <div className="links">
               {navLinks.map((link) => (

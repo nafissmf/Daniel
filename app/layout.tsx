@@ -19,15 +19,19 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Daniel & Kaylila – Bersama untuk Undip yang Lebih Baik",
+  title: "Daniel & Kaylila – Bersama untuk FSM yang Lebih Baik",
   description:
     "Daniel Lamganda Tua Gultom dan Kaylila Alexandra Nesta. Dua mahasiswa Undip dengan pengalaman kepemimpinan, organisasi, dan pengabdian.",
   openGraph: {
-    title: "Daniel & Kaylila – Bersama untuk Undip yang Lebih Baik",
+    title: "Daniel & Kaylila – Bersama untuk FSM yang Lebih Baik",
     description:
-      "Daniel Lamganda Tua Gultom dan Kaylila Alexandra Nesta. Bersama untuk Undip yang lebih baik.",
+      "Daniel Lamganda Tua Gultom dan Kaylila Alexandra Nesta. Bersama untuk FSM yang lebih baik.",
     locale: "id_ID",
     type: "website",
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico", type: "image/png" }],
+    apple: [{ url: "/favicon.ico", type: "image/png" }],
   },
 };
 

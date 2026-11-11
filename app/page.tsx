@@ -35,7 +35,7 @@ export default function HomePage() {
         />
         <div className="wrap">
           <div className="txt">
-            <span className="tag">Bersama untuk Undip yang Lebih Baik</span>
+            <span className="tag">Bersama untuk FSM yang Lebih Baik</span>
             <h1>
               Daniel <span>&</span> Kaylila
             </h1>
